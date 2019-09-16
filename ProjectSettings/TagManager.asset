@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - AirBarrier
+  - Barrier
+  - Wall
+  - Heart
+  - None
   layers:
   - Default
   - TransparentFX

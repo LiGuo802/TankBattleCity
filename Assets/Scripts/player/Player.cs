@@ -22,7 +22,7 @@ namespace player {
 
         private void Start() {
             Log.D(Tag, "Start: level = " + GetLevel());
-            // Invoke($"Upgrade", 3f);
+            Invoke($"Upgrade", 3f);
         }
 
         private void InitParams() {

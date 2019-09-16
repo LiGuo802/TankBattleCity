@@ -22,6 +22,20 @@ public class Bullet : MonoBehaviour {
             case Tag.AirBarrier:
                 Destroy(gameObject);
                 break;
+            case Tag.Wall:
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+                break;
+            case Tag.Barrier:
+                if (_canBreakBarrier) {
+                    Destroy(other.gameObject);
+                }
+                Destroy(gameObject);
+                break;
+            case Tag.Heart:
+                Destroy(gameObject);
+                other.gameObject.SendMessage("BeAttacked");
+                break;
         }
     }
 }
